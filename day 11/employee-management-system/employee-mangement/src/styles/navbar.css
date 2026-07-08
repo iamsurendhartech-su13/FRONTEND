@@ -1,0 +1,18 @@
+.navbar{
+    height:70px;
+    background:#009688;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    color:white;
+}
+
+.logout-btn{
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
