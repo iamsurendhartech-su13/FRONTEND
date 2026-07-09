@@ -113,3 +113,35 @@ button:hover {
 .save-btn:hover{
     background:#0284c7;
 }
+/* Search & Filter */
+.search-filter {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 10px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-filter input {
+  flex: 1;
+  min-width: 280px;
+}
+
+.search-filter select {
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.search-filter input:focus,
+.search-filter select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 5px rgba(14, 165, 233, 0.3);
+}

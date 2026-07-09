@@ -16,7 +16,8 @@ export default function EmployeeTable() {
   const filteredEmployees = employees.filter((emp) => {
     const matchesSearch =
       emp.name.toLowerCase().includes(search.toLowerCase()) ||
-      emp.id.toLowerCase().includes(search.toLowerCase());
+      (emp.employeeId &&
+        emp.employeeId.toLowerCase().includes(search.toLowerCase()));
 
     const matchesDepartment =
       departmentFilter === "" ||
@@ -26,7 +27,11 @@ export default function EmployeeTable() {
       genderFilter === "" ||
       emp.gender === genderFilter;
 
-    return matchesSearch && matchesDepartment && matchesGender;
+    return (
+      matchesSearch &&
+      matchesDepartment &&
+      matchesGender
+    );
   });
 
   return (
@@ -37,7 +42,7 @@ export default function EmployeeTable() {
       <div className="search-filter">
         <input
           type="text"
-          placeholder="Search by ID or Name"
+          placeholder="Search by Employee ID or Name"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -93,7 +98,9 @@ export default function EmployeeTable() {
           ) : (
             filteredEmployees.map((emp) => (
               <tr key={emp.id}>
-                <td>{emp.id}</td>
+                {/* Display Employee ID entered by user */}
+                <td>{emp.employeeId}</td>
+
                 <td>{emp.name}</td>
                 <td>{emp.email}</td>
                 <td>{emp.phone}</td>

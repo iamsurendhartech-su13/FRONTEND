@@ -1,17 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { EmployeeContext } from "../context/EmployeeContext";
-import "../styles/employee.css";
 import { DepartmentContext } from "../context/DepartmentContext";
-import { useEffect } from "react";
+import "../styles/employee.css";
+
 export default function EmployeeForm() {
- const {
-  addEmployee,
-  updateEmployee,
-  editEmployee,
-} = useContext(EmployeeContext);
+  const {
+    addEmployee,
+    updateEmployee,
+    editEmployee,
+  } = useContext(EmployeeContext);
+
   const { departments } = useContext(DepartmentContext);
+
   const [employee, setEmployee] = useState({
-    id: "",
+    employeeId: "",
     name: "",
     email: "",
     phone: "",
@@ -20,11 +22,13 @@ export default function EmployeeForm() {
     gender: "",
     salary: "",
   });
-   useEffect(() => {
-  if (editEmployee) {
-    setEmployee(editEmployee);
-  }
-}, [editEmployee]);
+
+  useEffect(() => {
+    if (editEmployee) {
+      setEmployee(editEmployee);
+    }
+  }, [editEmployee]);
+
   const handleChange = (e) => {
     setEmployee({
       ...employee,
@@ -33,36 +37,39 @@ export default function EmployeeForm() {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (editEmployee) {
-    updateEmployee(employee);
-  } else {
-    addEmployee(employee);
-  }
+    if (editEmployee) {
+      updateEmployee(employee);
+    } else {
+      addEmployee(employee);
+    }
 
-  setEmployee({
-    id: "",
-    name: "",
-    email: "",
-    phone: "",
-    department: "",
-    designation: "",
-    gender: "",
-    salary: "",
-  });
-};
+    setEmployee({
+      employeeId: "",
+      name: "",
+      email: "",
+      phone: "",
+      department: "",
+      designation: "",
+      gender: "",
+      salary: "",
+    });
+  };
+
   return (
     <div className="employee-form-container">
-      <h2>Add Employee</h2>
+      <h2>{editEmployee ? "Update Employee" : "Add Employee"}</h2>
 
       <form className="employee-form" onSubmit={handleSubmit}>
+
         <input
           type="text"
-          name="id"
-          placeholder="Employee ID"
-          value={employee.id}
+          name="employeeId"
+          placeholder="Employee ID (EMP001)"
+          value={employee.employeeId}
           onChange={handleChange}
+          required
         />
 
         <input
@@ -71,6 +78,7 @@ export default function EmployeeForm() {
           placeholder="Employee Name"
           value={employee.name}
           onChange={handleChange}
+          required
         />
 
         <input
@@ -79,6 +87,7 @@ export default function EmployeeForm() {
           placeholder="Email"
           value={employee.email}
           onChange={handleChange}
+          required
         />
 
         <input
@@ -87,24 +96,27 @@ export default function EmployeeForm() {
           placeholder="Phone Number"
           value={employee.phone}
           onChange={handleChange}
+          required
         />
 
-       <select
-  name="department"
-  value={employee.department}
-  onChange={handleChange}
->
-  <option value="">Select Department</option>
-  <option value="HR">HR</option>
-  <option value="IT">IT</option>
-  <option value="Finance">Finance</option>
+        <select
+          name="department"
+          value={employee.department}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Select Department</option>
 
-  {departments.map((dept) => (
-    <option key={dept.id} value={dept.name}>
-      {dept.name}
-    </option>
-  ))}
-</select>
+          <option value="HR">HR</option>
+          <option value="IT">IT</option>
+          <option value="Finance">Finance</option>
+
+          {departments.map((dept) => (
+            <option key={dept.id} value={dept.name}>
+              {dept.name}
+            </option>
+          ))}
+        </select>
 
         <input
           type="text"
@@ -112,17 +124,19 @@ export default function EmployeeForm() {
           placeholder="Designation"
           value={employee.designation}
           onChange={handleChange}
+          required
         />
 
         <select
           name="gender"
           value={employee.gender}
           onChange={handleChange}
+          required
         >
           <option value="">Select Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
 
         <input
@@ -131,11 +145,13 @@ export default function EmployeeForm() {
           placeholder="Salary"
           value={employee.salary}
           onChange={handleChange}
+          required
         />
 
-       <button type="submit">
-  {editEmployee ? "Update Employee" : "Save Employee"}
-</button>
+        <button type="submit">
+          {editEmployee ? "Update Employee" : "Save Employee"}
+        </button>
+
       </form>
     </div>
   );

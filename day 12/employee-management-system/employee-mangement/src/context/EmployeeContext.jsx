@@ -1,38 +1,61 @@
 import { createContext, useEffect, useState } from "react";
+import API from "../api/employeeApi";
 
 export const EmployeeContext = createContext();
 
 export const EmployeeProvider = ({ children }) => {
-  const [employees, setEmployees] = useState(() => {
-    const data = localStorage.getItem("employees");
-    return data ? JSON.parse(data) : [];
-  });
-
+  const [employees, setEmployees] = useState([]);
   const [editEmployee, setEditEmployee] = useState(null);
 
+  // Load employees from JSON Server
   useEffect(() => {
-    localStorage.setItem("employees", JSON.stringify(employees));
-  }, [employees]);
+    fetchEmployees();
+  }, []);
+
+  const fetchEmployees = async () => {
+    try {
+      const response = await API.get("/employees");
+      setEmployees(response.data);
+    } catch (error) {
+      console.error("Error fetching employees:", error);
+    }
+  };
 
   // Add Employee
-  const addEmployee = (employee) => {
-    setEmployees([...employees, employee]);
+  const addEmployee = async (employee) => {
+    try {
+      const response = await API.post("/employees", employee);
+      setEmployees((prev) => [...prev, response.data]);
+    } catch (error) {
+      console.error("Error adding employee:", error);
+    }
   };
 
   // Delete Employee
-  const deleteEmployee = (id) => {
-    setEmployees(employees.filter((emp) => emp.id !== id));
+  const deleteEmployee = async (id) => {
+    try {
+      await API.delete(`/employees/${id}`);
+      setEmployees((prev) => prev.filter((emp) => emp.id !== id));
+    } catch (error) {
+      console.error("Error deleting employee:", error);
+    }
   };
 
   // Update Employee
-  const updateEmployee = (updatedEmployee) => {
-    setEmployees(
-      employees.map((emp) =>
-        emp.id === updatedEmployee.id ? updatedEmployee : emp
-      )
-    );
+  const updateEmployee = async (updatedEmployee) => {
+    try {
+      await API.put(`/employees/${updatedEmployee.id}`, updatedEmployee);
 
-    setEditEmployee(null);
+      setEmployees((prev) =>
+        prev.map((emp) =>
+          emp.id === updatedEmployee.id ? updatedEmployee : emp
+        )
+      );
+
+      setEditEmployee(null);
+    } catch (error) {
+      console.error("Error updating employee:", error);
+    }
   };
 
   return (

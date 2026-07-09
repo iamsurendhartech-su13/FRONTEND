@@ -1,3 +1,49 @@
 {
-  "employees": []
+  "employees": [
+    {
+      "id": "1",
+      "employeeId": "EMP001",
+      "name": "surendhar",
+      "email": "720823106111@hit.edu.in",
+      "phone": "9042281190",
+      "department": "IT",
+      "designation": "Manager",
+      "gender": "Male",
+      "salary": "500000"
+    },
+    {
+      "id": "2",
+      "employeeId": "EMP002",
+      "name": "saranya",
+      "email": "7208231061001@hit.edu.in",
+      "phone": "9876543210",
+      "department": "Finance",
+      "designation": "Developer",
+      "gender": "Female",
+      "salary": "890000"
+    },
+    {
+      "id": "3",
+      "employeeId": "EMP003",
+      "name": "priya",
+      "email": "jk@gmail.com",
+      "phone": "6785446798",
+      "department": "Electronics",
+      "designation": "Associate Producer",
+      "gender": "Female",
+      "salary": "750000"
+    },
+    {
+      "employeeId": "83938",
+      "name": "esai",
+      "email": "esai@gmail.com",
+      "phone": "6785446798",
+      "department": "IT",
+      "designation": "full stack devloper",
+      "gender": "Other",
+      "salary": "750000",
+      "id": "OpwZN96gXIA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

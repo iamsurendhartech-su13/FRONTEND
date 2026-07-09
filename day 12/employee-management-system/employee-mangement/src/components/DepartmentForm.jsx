@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { DepartmentContext } from "../context/DepartmentContext";
 
 export default function DepartmentForm() {
-
   const { addDepartment } = useContext(DepartmentContext);
 
   const [department, setDepartment] = useState({
@@ -22,32 +21,40 @@ export default function DepartmentForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="department-form-container">
+      <h2>Add Department</h2>
 
-      <input
-        placeholder="Department ID"
-        value={department.id}
-        onChange={(e) =>
-          setDepartment({
-            ...department,
-            id: e.target.value,
-          })
-        }
-      />
+      <form className="department-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Department ID"
+          value={department.id}
+          onChange={(e) =>
+            setDepartment({
+              ...department,
+              id: e.target.value,
+            })
+          }
+          required
+        />
 
-      <input
-        placeholder="Department Name"
-        value={department.name}
-        onChange={(e) =>
-          setDepartment({
-            ...department,
-            name: e.target.value,
-          })
-        }
-      />
+        <input
+          type="text"
+          placeholder="Department Name"
+          value={department.name}
+          onChange={(e) =>
+            setDepartment({
+              ...department,
+              name: e.target.value,
+            })
+          }
+          required
+        />
 
-      <button>Add Department</button>
-
-    </form>
+        <button type="submit">
+          Add Department
+        </button>
+      </form>
+    </div>
   );
 }
