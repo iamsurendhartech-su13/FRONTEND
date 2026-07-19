@@ -1,0 +1,71 @@
+2026-07-18 14:56:35.573 [com.employee.automation.utilities.CreateTestData.main()] INFO  com.employee.automation.utilities.CreateTestData — ? employee_data.xlsx created at: src/test/resources/testdata/employee_data.xlsx
+2026-07-18 15:01:14.013 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Add Employee with valid data and verify in UI ===
+2026-07-18 15:01:14.254 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: ExtentReports initialized.
+2026-07-18 15:01:14.258 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:01:16.619 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:01:16.620 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Add Employee with valid data and verify in UI
+2026-07-18 15:01:16.626 [main] INFO  com.employee.automation.utilities.ConfigReader — ConfigReader: config.properties loaded successfully.
+2026-07-18 15:01:33.270 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Add Employee with valid data and verify in UI
+2026-07-18 15:01:33.416 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Add_Employee_with_valid_data_and_verify_in_UI_20260718_150133.png
+2026-07-18 15:01:33.729 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Add Employee with valid data and verify in UI
+2026-07-18 15:01:34.149 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:01:34.179 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Add Employee and verify via GET API ===
+2026-07-18 15:01:34.179 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:01:35.128 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:01:35.129 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Add Employee and verify via GET API
+2026-07-18 15:01:50.913 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Add Employee and verify via GET API
+2026-07-18 15:01:51.075 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Add_Employee_and_verify_via_GET_API_20260718_150150.png
+2026-07-18 15:01:51.349 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Add Employee and verify via GET API
+2026-07-18 15:01:51.381 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:01:51.402 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Add Employee and verify employee count increases via API ===
+2026-07-18 15:01:51.403 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:01:52.426 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:01:52.427 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Add Employee and verify employee count increases via API
+2026-07-18 15:02:08.492 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Add Employee and verify employee count increases via API
+2026-07-18 15:02:08.639 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Add_Employee_and_verify_employee_count_increases_via_API_20260718_150208.png
+2026-07-18 15:02:08.897 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Add Employee and verify employee count increases via API
+2026-07-18 15:02:08.912 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:02:08.943 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Verify GET employees API returns status 200 ===
+2026-07-18 15:02:08.944 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:02:09.771 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:02:09.771 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Verify GET employees API returns status 200
+2026-07-18 15:02:24.843 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Verify GET employees API returns status 200
+2026-07-18 15:02:24.963 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Verify_GET_employees_API_returns_status_200_20260718_150224.png
+2026-07-18 15:02:25.315 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Verify GET employees API returns status 200
+2026-07-18 15:02:25.341 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:02:25.355 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Verify GET employees API response time is acceptable ===
+2026-07-18 15:02:25.355 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:02:26.209 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:02:26.210 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Verify GET employees API response time is acceptable
+2026-07-18 15:02:42.286 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Verify GET employees API response time is acceptable
+2026-07-18 15:02:42.408 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Verify_GET_employees_API_response_time_is_acceptable_20260718_150242.png
+2026-07-18 15:02:42.721 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Verify GET employees API response time is acceptable
+2026-07-18 15:02:42.745 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:02:42.750 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Add Employee with specific form data ===
+2026-07-18 15:02:42.750 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:02:43.548 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:02:43.549 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Add Employee with specific form data
+2026-07-18 15:02:59.179 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Add Employee with specific form data
+2026-07-18 15:02:59.351 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Add_Employee_with_specific_form_data_20260718_150259.png
+2026-07-18 15:02:59.586 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Add Employee with specific form data
+2026-07-18 15:02:59.618 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:02:59.627 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Add multiple employees from Excel data ===
+2026-07-18 15:02:59.627 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:03:00.673 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:03:00.674 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Add multiple employees from Excel data
+2026-07-18 15:03:16.623 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Add multiple employees from Excel data
+2026-07-18 15:03:16.796 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Add_multiple_employees_from_Excel_data_20260718_150316.png
+2026-07-18 15:03:17.101 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Add multiple employees from Excel data
+2026-07-18 15:03:17.120 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:03:17.135 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Verify employee added successfully toast and UI refresh ===
+2026-07-18 15:03:17.135 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:03:18.113 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:03:18.113 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Verify employee added successfully toast and UI refresh
+2026-07-18 15:03:34.212 [main] ERROR com.employee.automation.hooks.Hooks — SCENARIO FAILED: Verify employee added successfully toast and UI refresh
+2026-07-18 15:03:34.342 [main] INFO  com.employee.automation.utilities.ScreenshotUtility — Screenshot saved: E:\html placement\Employee managaement\EmployeeAutomation\screenshots\Verify_employee_added_successfully_toast_and_UI_refresh_20260718_150334.png
+2026-07-18 15:03:34.611 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver closed after scenario: Verify employee added successfully toast and UI refresh
+2026-07-18 15:03:34.645 [main] INFO  com.employee.automation.utilities.ExtentManager — ExtentManager: Report flushed successfully.
+2026-07-18 15:03:34.653 [main] INFO  com.employee.automation.hooks.Hooks — === SCENARIO START: Delete Employee and verify removed from UI ===
+2026-07-18 15:03:34.654 [main] INFO  com.employee.automation.utilities.DriverFactory — DriverFactory: Creating chrome WebDriver...
+2026-07-18 15:03:35.473 [main] WARN  com.employee.automation.hooks.Hooks — Frontend (port 3001) not reachable! Tests may fail.
+2026-07-18 15:03:35.473 [main] INFO  com.employee.automation.hooks.Hooks — Hooks: WebDriver initialized for scenario: Delete Employee and verify removed from UI

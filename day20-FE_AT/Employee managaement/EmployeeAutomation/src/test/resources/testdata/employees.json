@@ -1,0 +1,32 @@
+{
+  "employeeToAdd": {
+    "name": "Alex Mercer",
+    "email": "alex.mercer@example.com",
+    "phone": "9876543210",
+    "salary": "85000",
+    "department": "electronic ",
+    "designation": "Software Developer",
+    "joiningDate": "2026-07-01",
+    "status": "Active"
+  },
+  "employeeToEdit": {
+    "name": "Alex Mercer Updated",
+    "email": "alex.mercer@example.com",
+    "phone": "9876543211",
+    "salary": "95000",
+    "department": "electronic ",
+    "designation": "Lead Engineer",
+    "joiningDate": "2026-07-01",
+    "status": "Active"
+  },
+  "invalidEmailEmployee": {
+    "name": "Jane Doe",
+    "email": "invalidemailformat",
+    "phone": "1234567890",
+    "salary": "50000",
+    "department": "electronic ",
+    "designation": "QA Analyst",
+    "joiningDate": "2026-07-01",
+    "status": "Active"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "employees": [
+    {
+      "name": "rakesh",
+      "email": "rakesh@gmail.com",
+      "phone": "4567890000",
+      "gender": "",
+      "dob": "",
+      "address": "",
+      "department": "",
+      "designation": "chennai",
+      "joiningDate": "2021-06-17",
+      "salary": "678900",
+      "employmentType": "",
+      "status": "Active",
+      "id": 1
+    },
+    {
+      "name": "Test Toast",
+      "email": "testtoast@example.com",
+      "phone": "",
+      "gender": "",
+      "dob": "",
+      "address": "",
+      "department": "electronic ",
+      "designation": "Tester",
+      "joiningDate": "",
+      "salary": "50000",
+      "employmentType": "",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "name": "Toast Test 2",
+      "email": "toast2@example.com",
+      "phone": "",
+      "gender": "",
+      "dob": "",
+      "address": "",
+      "department": "electronic ",
+      "designation": "Developer",
+      "joiningDate": "",
+      "salary": "60000",
+      "employmentType": "",
+      "status": "Active",
+      "id": 3
+    }
+  ],
+  "departments": [
+    {
+      "name": "electronic ",
+      "head": "muneeswaran",
+      "id": 1
+    }
+  ],
+  "attendance": [
+    {
+      "employeeName": "rakesh",
+      "employeeId": "1",
+      "department": "",
+      "date": "2026-07-10",
+      "status": "Late",
+      "timeIn": "08:08",
+      "timeOut": "02:08",
+      "notes": "for bike puncher",
+      "id": 1
+    }
+  ],
+  "salary": [
+    {
+      "employeeName": "rakesh",
+      "employeeId": "1",
+      "department": "",
+      "basicSalary": "678900",
+      "bonus": "500",
+      "deductions": 0,
+      "tax": 0,
+      "netSalary": 679400,
+      "salaryMonth": "2026-07",
+      "paymentStatus": "Pending",
+      "id": 1
+    }
+  ],
+  "leave": [],
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
+  "settings": [
+    {
+      "id": "1",
+      "companyName": "",
+      "companyEmail": "",
+      "companyPhone": "",
+      "companyAddress": "",
+      "profilePhoto": "",
+      "fullName": "",
+      "email": "",
+      "phone": "",
+      "themeMode": "light",
+      "emailNotifications": false,
+      "pushNotifications": false
+    }
+  ]
+}
